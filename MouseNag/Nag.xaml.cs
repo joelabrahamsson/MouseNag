@@ -18,7 +18,7 @@ namespace MouseNag
             Topmost = true;
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-
+            closeButton.Focus();
             RandomlyPlaceCloseButton();
         }
 

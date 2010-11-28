@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("MouseNag")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Joel Abrahamsson")]
 [assembly: AssemblyProduct("MouseNag")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
