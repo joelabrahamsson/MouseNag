@@ -8,7 +8,7 @@ using It = Machine.Specifications.It;
 namespace MouseNag.Specs.MouseNagPresenterSpecs
 {
     [Subject(typeof(MouseNagPresenter))]
-    public class user_moves_mouse_then_presses_keyboard_then_moves_mouse
+    public class user_starts_program_and_moves_the_mouse
     {
         private static Mock<IInputSource> input;
         private static Mock<INag> annoyance;
@@ -18,15 +18,13 @@ namespace MouseNag.Specs.MouseNagPresenterSpecs
             annoyance = new Mock<INag>();
             input = new Mock<IInputSource>();
             new MouseNagPresenter(input.Object, annoyance.Object);
-            input.Raise(i => i.MouseMoved += null, new EventArgs());
-            input.Raise(i => i.KeyBoardKeyPressed += null, new EventArgs());
         };
 
         Because of = () =>
             input.Raise(i => i.MouseMoved += null, new EventArgs());
 
-        It should_nag_once = () =>
-            annoyance.Verify(a => a.Nag(), Times.Once());
+        It should_not_nag = () =>
+            annoyance.Verify(a => a.Nag(), Times.Never());
 
     }
 }

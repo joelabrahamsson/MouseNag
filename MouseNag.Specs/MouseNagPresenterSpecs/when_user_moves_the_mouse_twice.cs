@@ -1,6 +1,8 @@
 ﻿using System;
 using Machine.Specifications;
 using Moq;
+using MouseNag.InputMonitoring;
+using MouseNag.Presentation;
 using It = Machine.Specifications.It;
 
 namespace MouseNag.Specs.MouseNagPresenterSpecs
@@ -22,8 +24,8 @@ namespace MouseNag.Specs.MouseNagPresenterSpecs
         Because of = () =>
             input.Raise(i => i.MouseMoved += null, new EventArgs());
 
-        It should_nag_once = () =>
-            annoyance.Verify(a => a.Nag(), Times.Once());
+        It should_not_nag = () =>
+            annoyance.Verify(a => a.Nag(), Times.Never());
 
     }
 }

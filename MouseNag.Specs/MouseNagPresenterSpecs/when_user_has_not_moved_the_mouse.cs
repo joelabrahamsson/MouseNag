@@ -1,5 +1,7 @@
 ﻿using Machine.Specifications;
 using Moq;
+using MouseNag.InputMonitoring;
+using MouseNag.Presentation;
 using It = Machine.Specifications.It;
 
 namespace MouseNag.Specs.MouseNagPresenterSpecs
